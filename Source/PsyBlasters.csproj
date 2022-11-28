@@ -50,11 +50,9 @@
     <AboutFiles Include="..\About\**">
       <Link>About\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </AboutFiles>
-    <Compile Include="HarmonyPatches\Patch.cs" />
     <Compile Include="PsychicBlasterBullet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PsyBlasterComp.cs" />
-    <Compile Include="ProjCountDeciderComp.cs" />
     <Compile Include="PsyBlasters.cs" />
   </ItemGroup>
   <ItemGroup>
