@@ -11,6 +11,8 @@ namespace PsyBlasters
         }
 
         public int addedDamage = 0;
+        public float addedArmPen = 0f;
+        
         public float psyCost = 0f;
         public float entropyCost = 0f;
     }

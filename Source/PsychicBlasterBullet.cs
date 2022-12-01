@@ -22,6 +22,23 @@ namespace PsyBlasters
             }
         }
 
+        public override float ArmorPenetration
+        {
+            get
+            {
+                var armPen = base.ArmorPenetration;
+                
+                var launcherPawn = Launcher as Pawn;
+                var compProperties = EquipmentDef.GetCompProperties<CompProperties_PsyBlaster>();
+                if (compProperties != null && launcherPawn is { HasPsylink: true, psychicEntropy.CurrentPsyfocus: > 0 })
+                {
+                    armPen += compProperties.addedArmPen;
+                }
+
+                return armPen;
+            }
+        }
+
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             base.Impact(hitThing, blockedByShield);
