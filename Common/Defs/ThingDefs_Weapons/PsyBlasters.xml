@@ -1,54 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>PB_Gun</defName>
-        <label>Psyblaster</label>
-        <description>A general-purpose gas-operated assault rifle for field or urban combat. It has good range, decent power, and good accuracy.</description>
+        <defName>PB_Prototype</defName>
+        <label>Psyblaster Prototype</label>
+        <description>A prototype psy-assisted assault rifle. While initially less powerful than similar weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <soundInteract>Interact_Rifle</soundInteract>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <!--TODO change research-->
         <recipeMaker>
-            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            <researchPrerequisite>Fabrication</researchPrerequisite>
             <skillRequirements>
-                <Crafting>6</Crafting>
+                <Crafting>7</Crafting>
             </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
         </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <statBases>
-            <WorkToMake>40000</WorkToMake>
-            <Mass>3.5</Mass>
-            <AccuracyTouch>0.60</AccuracyTouch>
-            <AccuracyShort>0.70</AccuracyShort>
-            <AccuracyMedium>0.65</AccuracyMedium>
-            <AccuracyLong>0.55</AccuracyLong>
-            <RangedWeapon_Cooldown>1.70</RangedWeapon_Cooldown>
+            <WorkToMake>45000</WorkToMake>
+            <Mass>4.6</Mass>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.64</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.45</AccuracyLong>
+            <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
         </statBases>
         <costList>
-            <Steel>60</Steel>
-            <ComponentIndustrial>7</ComponentIndustrial>
+            <Plasteel>35</Plasteel>
+            <ComponentSpacer>3</ComponentSpacer>
         </costList>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>PsyblasterShot</defaultProjectile>
+                <defaultProjectile>PB_PsyblasterShot</defaultProjectile>
                 <warmupTime>1.0</warmupTime>
-                <range>30.9</range>
-                <burstShotCount>1</burstShotCount>
-                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                <soundCast>Shot_AssaultRifle</soundCast>
+                <range>25.9</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <soundCast>Shot_ChargeRifle</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
         </verbs>
         <weaponTags>
-            <li>IndustrialGunAdvanced</li>
-            <li>AssaultRifle</li>
+            <li>SpacerGun</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
         <tools>
             <li>
                 <label>stock</label>
@@ -71,14 +81,16 @@
         <comps>
             <li Class="PsyBlasters.CompProperties_PsyBlaster">
                 <compClass>PsyBlasters.PsyBlasterComp</compClass>
-                <addedDamage>3</addedDamage>
+                <addedDamage>5</addedDamage>
+                <addedArmPen>0.15</addedArmPen>
                 <psyCost>0.05</psyCost>
+                <entropyCost>0.05</entropyCost>
             </li>
         </comps>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
-        <defName>PsyblasterShot</defName>
+        <defName>PB_PsyblasterShot</defName>
         <label>blaster shot</label>
         <graphicData>
             <texPath>Things/Projectile/BlasterShot</texPath>
@@ -87,8 +99,8 @@
         <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>15</damageAmountBase>
-            <armorPenetrationBase>0.35</armorPenetrationBase>
+            <damageAmountBase>13</damageAmountBase>
+            <armorPenetrationBase>0.30</armorPenetrationBase>
             <speed>70</speed>
         </projectile>
     </ThingDef>
