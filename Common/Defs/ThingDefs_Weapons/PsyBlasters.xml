@@ -84,7 +84,7 @@
                 <addedDamage>5</addedDamage>
                 <addedArmPen>0.15</addedArmPen>
                 <psyCost>0.05</psyCost>
-                <entropyCost>0.05</entropyCost>
+                <entropyCost>8</entropyCost>
             </li>
         </comps>
     </ThingDef>
