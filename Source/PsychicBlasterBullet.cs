@@ -39,12 +39,13 @@ namespace PsyBlasters
             }
         }
 
+        //Do damage. If hits pawn, use resources, else, don't use resources most of the time.
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             base.Impact(hitThing, blockedByShield);
 
             //TODO: randchance to prop
-            if (hitThing == null && Rand.Chance(0.75f)) return;
+            if (hitThing is not Pawn && Rand.Chance(0.66f)) return;
 
             var launcherPawn = Launcher as Pawn;
             var compProperties = EquipmentDef.GetCompProperties<CompProperties_PsyBlaster>();
