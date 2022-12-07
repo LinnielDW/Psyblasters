@@ -22,9 +22,27 @@ namespace PsyBlasters
     {
         public CompProperties_PsyBlasterBullet Props => (CompProperties_PsyBlasterBullet)props;
 
-        public float PsyDamageMultiMulti => Props.psyDamageMulti;
-        public float PsyPenMultiMulti => Props.psyPenMulti;
-        public float PsyCost => Props.psyCost;
-        public float EntropyCost => Props.entropyCost;
+        public float PsyDamageMulti;
+        public float PsyPenMulti;
+        public float PsyCost;
+        public float EntropyCost;
+
+        public override void Initialize(CompProperties props)
+        {
+            base.Initialize(props);
+            PsyDamageMulti = Props.psyDamageMulti;
+            PsyPenMulti = Props.psyPenMulti;
+            PsyCost = Props.psyCost;
+            EntropyCost = Props.entropyCost;
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look(ref PsyDamageMulti, "PsyDamageMulti");
+            Scribe_Values.Look(ref PsyPenMulti, "PsyDamageMulti");
+            Scribe_Values.Look(ref PsyCost, "PsyDamageMulti");
+            Scribe_Values.Look(ref EntropyCost, "PsyDamageMulti");
+        }
     }
 }
