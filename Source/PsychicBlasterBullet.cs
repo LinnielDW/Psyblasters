@@ -6,19 +6,29 @@ namespace PsyBlasters
     [HotSwappable]
     public class PsychicBlasterBullet : Bullet
     {
+        private PsyBlasterBulletComp _psyBlasterBulletComp;
+
+        public PsychicBlasterBullet()
+        {
+            _psyBlasterBulletComp = GetComp<PsyBlasterBulletComp>();
+        }
+
+        private bool CanConsumeResources()
+        {
+            return _psyBlasterBulletComp != null && Launcher as Pawn is { HasPsylink: true, psychicEntropy.CurrentPsyfocus: > 0 };
+        }
+
         public override int DamageAmount
         {
             get
             {
-                var damage = base.DamageAmount;
-                var launcherPawn = Launcher as Pawn;
-                var compProperties = EquipmentDef.GetCompProperties<CompProperties_PsyBlaster>();
-                if (compProperties != null && launcherPawn is { HasPsylink: true, psychicEntropy.CurrentPsyfocus: > 0 })
+                var damMulti = weaponDamageMultiplier;
+                if (CanConsumeResources())
                 {
-                    damage += compProperties.addedDamage;
+                    damMulti += _psyBlasterBulletComp.PsyDamageMultiMulti;
                 }
 
-                return damage;
+                return def.projectile.GetDamageAmount(damMulti);
             }
         }
 
@@ -26,16 +36,13 @@ namespace PsyBlasters
         {
             get
             {
-                var armPen = base.ArmorPenetration;
-                
-                var launcherPawn = Launcher as Pawn;
-                var compProperties = EquipmentDef.GetCompProperties<CompProperties_PsyBlaster>();
-                if (compProperties != null && launcherPawn is { HasPsylink: true, psychicEntropy.CurrentPsyfocus: > 0 })
+                var armorPenMulti = weaponDamageMultiplier;
+                if (CanConsumeResources())
                 {
-                    armPen += compProperties.addedArmPen;
+                    armorPenMulti += _psyBlasterBulletComp.PsyPenMultiMulti;
                 }
 
-                return armPen;
+                return def.projectile.GetArmorPenetration(armorPenMulti);
             }
         }
 
@@ -45,19 +52,12 @@ namespace PsyBlasters
             base.Impact(hitThing, blockedByShield);
 
             //TODO: randchance to prop
-            if (hitThing is not Pawn && Rand.Chance(0.66f)) return;
-
-            var launcherPawn = Launcher as Pawn;
-            var compProperties = EquipmentDef.GetCompProperties<CompProperties_PsyBlaster>();
-            if (compProperties != null
-                && launcherPawn != null
-                && launcherPawn.HasPsylink
-                && launcherPawn.psychicEntropy.CurrentPsyfocus > 0
-                && !launcherPawn.psychicEntropy.WouldOverflowEntropy(compProperties.entropyCost))
-            {
-                launcherPawn.psychicEntropy.OffsetPsyfocusDirectly(-compProperties.psyCost);
-                launcherPawn.psychicEntropy.TryAddEntropy(compProperties.entropyCost);
-            }
+            if ((hitThing is not Pawn && Rand.Chance(0.66f))
+                || _psyBlasterBulletComp == null
+                || Launcher is not Pawn { HasPsylink: true, psychicEntropy.CurrentPsyfocus: <= 0 } launcherPawn
+                || launcherPawn.psychicEntropy.WouldOverflowEntropy(_psyBlasterBulletComp.EntropyCost)) return;
+            launcherPawn.psychicEntropy.OffsetPsyfocusDirectly(-_psyBlasterBulletComp.PsyCost);
+            launcherPawn.psychicEntropy.TryAddEntropy(_psyBlasterBulletComp.EntropyCost);
         }
     }
 }
