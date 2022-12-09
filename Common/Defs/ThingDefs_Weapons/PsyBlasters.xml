@@ -138,7 +138,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>PB_PsyblasterShot</defaultProjectile>
+                <defaultProjectile>PB_PsyblasterShot_Pistol</defaultProjectile>
                 <warmupTime>0.3</warmupTime>
                 <range>22.9</range>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
@@ -201,7 +201,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>PB_PsyblasterShot</defaultProjectile>
+                <defaultProjectile>PB_PsyblasterShot_Shotgun</defaultProjectile>
                 <warmupTime>0.9</warmupTime>
                 <range>14.9</range>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
@@ -265,7 +265,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>PB_PsyblasterShot</defaultProjectile>
+                <defaultProjectile>PB_PsyblasterShot_Sniper</defaultProjectile>
                 <warmupTime>3.0</warmupTime>
                 <range>39.9</range>
                 <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
