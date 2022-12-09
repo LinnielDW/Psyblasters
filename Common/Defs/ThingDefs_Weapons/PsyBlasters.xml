@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+    <!--  Psyblaster Base  -->
     <ThingDef Name="BasePsyBlaster" ParentName="BaseHumanMakeableGun" Abstract="True">
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
@@ -15,6 +16,7 @@
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>
+        <techLevel>Spacer</techLevel>
         <weaponTags>
             <li>SpacerGun</li>
         </weaponTags>
@@ -44,10 +46,12 @@
             </li>
         </tools>
     </ThingDef>
+    
+    <!--  Psyblaster Rifle  -->
     <ThingDef ParentName="BasePsyBlaster">
-        <defName>PB_Prototype</defName>
-        <label>Psyblaster Prototype</label>
-        <description>A prototype psy-assisted assault rifle. While initially less powerful than similar weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <defName>PB_Prototype_Rifle</defName>
+        <label>Psyblaster Prototype Rifle</label>
+        <description>A prototype psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -81,10 +85,74 @@
             </li>
         </verbs>
     </ThingDef>
-
     <ThingDef ParentName="BaseBullet">
         <defName>PB_PsyblasterShot</defName>
         <label>blaster shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/BlasterShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationBase>0.28</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+        <comps>
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.5</psyDamageMulti>
+                <psyPenMulti>0.5</psyPenMulti>
+                <psyCost>0.07</psyCost>
+                <entropyCost>10</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <!--  Psyblaster Pistol  -->
+    <ThingDef ParentName="BasePsyBlaster">
+        <defName>PB_Prototype_Pisol</defName>
+        <label>Psyblaster Prototype Pistol</label>
+        <description>A prototype psy-assisted pistol. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>38000</WorkToMake>
+            <Mass>1.1</Mass>
+            <AccuracyTouch>0.8</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.40</AccuracyMedium>
+            <AccuracyLong>0.30</AccuracyLong>
+            <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Plasteel>35</Plasteel>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_PsyblasterShot</defaultProjectile>
+                <warmupTime>0.3</warmupTime>
+                <minRange>1.5</minRange>
+                <range>22.9</range>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_PsyblasterShot_Pistol</defName>
+        <label>blaster pistol shot</label>
         <graphicData>
             <texPath>Things/Projectile/BlasterShot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -92,8 +160,8 @@
         <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>12</damageAmountBase>
-            <armorPenetrationBase>0.25</armorPenetrationBase>
+            <damageAmountBase>7</damageAmountBase>
+            <armorPenetrationBase>0.28</armorPenetrationBase>
             <speed>70</speed>
         </projectile>
         <comps>
