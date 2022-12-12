@@ -53,7 +53,7 @@
         <label>Psyblaster Prototype Rifle</label>
         <description>A prototype psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
+            <texPath>Things/Item/Equipment/Weapon/PB_rifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -117,7 +117,7 @@
         <label>Psyblaster Prototype Pistol</label>
         <description>A prototype psy-assisted pistol. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
+            <texPath>Things/Item/Equipment/Weapon/PB_pistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -180,7 +180,7 @@
         <label>Psyblaster Prototype Shotgun</label>
         <description>A prototype psy-assisted shotgun. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
+            <texPath>Things/Item/Equipment/Weapon/PB_shotgun</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -244,7 +244,7 @@
         <label>Psyblaster Prototype Sniper Rifle</label>
         <description>A prototype psy-assisted sniper rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Weapon/TrackPsyBlaster2x</texPath>
+            <texPath>Things/Item/Equipment/Weapon/PB_sniper</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
