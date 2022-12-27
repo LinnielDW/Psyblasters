@@ -216,7 +216,7 @@
         <defName>PB_PsyblasterShot_Shotgun</defName>
         <label>blaster shotgun shot</label>
         <graphicData>
-            <texPath>Things/Projectile/BlasterShot</texPath>
+            <texPath>Things/Projectile/PB_wide_shot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
@@ -280,7 +280,7 @@
         <defName>PB_PsyblasterShot_Sniper</defName>
         <label>blaster sniper shot</label>
         <graphicData>
-            <texPath>Things/Projectile/PB_wide_shot</texPath>
+            <texPath>Things/Projectile/BlasterShot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
