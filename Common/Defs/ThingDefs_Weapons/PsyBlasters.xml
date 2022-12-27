@@ -49,9 +49,9 @@
     
     <!--  Psyblaster Rifle  -->
     <ThingDef ParentName="BasePsyBlaster">
-        <defName>PB_Prototype_Rifle</defName>
-        <label>Psyblaster Prototype Rifle</label>
-        <description>A prototype psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <defName>PB_Rifle</defName>
+        <label>Psyblaster Rifle</label>
+        <description>A psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/PB_rifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -113,9 +113,9 @@
     
     <!--  Psyblaster Pistol  -->
     <ThingDef ParentName="BasePsyBlaster">
-        <defName>PB_Prototype_Pisol</defName>
-        <label>Psyblaster Prototype Pistol</label>
-        <description>A prototype psy-assisted pistol. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <defName>PB_Pisol</defName>
+        <label>Psyblaster Pistol</label>
+        <description>A psy-assisted pistol. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/PB_pistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -176,9 +176,9 @@
     
     <!--  Psyblaster Shotgun  -->
     <ThingDef ParentName="BasePsyBlaster">
-        <defName>PB_Prototype_Shotgun</defName>
-        <label>Psyblaster Prototype Shotgun</label>
-        <description>A prototype psy-assisted shotgun. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <defName>PB_Shotgun</defName>
+        <label>Psyblaster Shotgun</label>
+        <description>A psy-assisted shotgun. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/PB_shotgun</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -240,9 +240,9 @@
     
     <!--  Psyblaster Sniper  -->
     <ThingDef ParentName="BasePsyBlaster">
-        <defName>PB_Prototype_Sniper</defName>
-        <label>Psyblaster Prototype Sniper Rifle</label>
-        <description>A prototype psy-assisted sniper rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <defName>PB_Sniper</defName>
+        <label>Psyblaster Sniper Rifle</label>
+        <description>A psy-assisted sniper rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/PB_sniper</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -280,7 +280,7 @@
         <defName>PB_PsyblasterShot_Sniper</defName>
         <label>blaster sniper shot</label>
         <graphicData>
-            <texPath>Things/Projectile/BlasterShot</texPath>
+            <texPath>Things/Projectile/PB_wide_shot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
@@ -298,6 +298,69 @@
                 <psyPenMulti>0.5</psyPenMulti>
                 <psyCost>0.15</psyCost>
                 <entropyCost>20</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <!--  Braindump Rocket Launcher  -->
+    <ThingDef ParentName="BasePsyBlaster">
+        <defName>PB_Braindump_RocketLauncher</defName>
+        <label>Braindump Rocket Launcher</label>
+        <description>A reusable psychic energy payload delivery system. Affectionately called the 'Braindump' by its inventors, this weapon completely overwhelms the neural heat of the user, translating the created neural heat into a potentially devistating explosion. The strain of firing this weapon leaves the user incapacitated by psychic shock.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/PB_rocketlauncher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>50000</WorkToMake>
+            <Mass>8</Mass>
+            <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Plasteel>50</Plasteel>
+            <ComponentSpacer>10</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_PsyblasterRocket</defaultProjectile>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+                <warmupTime>4.5</warmupTime>
+                <range>35.9</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>15</muzzleFlashScale>
+                <onlyManualCast>true</onlyManualCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_PsyblasterRocket</defName>
+        <label>psyblaster rocket</label>
+        <graphicData>
+            <texPath>Things/Projectile/PB_wide_shot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterRocket</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>0</damageAmountBase>
+            <explosionRadius>8.9</explosionRadius>
+            <armorPenetrationBase>0.2</armorPenetrationBase>
+            <stoppingPower>2</stoppingPower>
+            <speed>50</speed>
+        </projectile>
+        <comps>
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.7</psyDamageMulti>
             </li>
         </comps>
     </ThingDef>

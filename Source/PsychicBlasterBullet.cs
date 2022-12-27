@@ -8,9 +8,9 @@ namespace PsyBlasters
     {
         PsyBlasterBulletComp _psyBlasterBulletComp => GetComp<PsyBlasterBulletComp>();
 
-        private bool CanConsumeResources()
+        private bool CanConsumeResources(Pawn launcherPawn)
         {
-            return _psyBlasterBulletComp != null && Launcher as Pawn is { HasPsylink: true, psychicEntropy.CurrentPsyfocus: > 0 };
+            return _psyBlasterBulletComp != null && launcherPawn is { HasPsylink: true, psychicEntropy.CurrentPsyfocus: > 0 };
         }
 
         public override int DamageAmount
@@ -18,7 +18,7 @@ namespace PsyBlasters
             get
             {
                 var damMulti = weaponDamageMultiplier;
-                if (CanConsumeResources())
+                if (CanConsumeResources(Launcher as Pawn))
                 {
                     damMulti += _psyBlasterBulletComp.PsyDamageMulti;
                 }
@@ -32,7 +32,7 @@ namespace PsyBlasters
             get
             {
                 var armorPenMulti = weaponDamageMultiplier;
-                if (CanConsumeResources())
+                if (CanConsumeResources(Launcher as Pawn))
                 {
                     armorPenMulti += _psyBlasterBulletComp.PsyPenMulti;
                 }
@@ -47,12 +47,10 @@ namespace PsyBlasters
             base.Impact(hitThing, blockedByShield);
 
             //TODO: randchance to prop
-            if ((hitThing is not Pawn && Rand.Chance(0.66f))
-                || _psyBlasterBulletComp == null
+            if (hitThing is not Pawn && Rand.Chance(0.66f)
                 || Launcher is not Pawn launcherPawn
-                || launcherPawn.HasPsylink == false
-                || launcherPawn.psychicEntropy.CurrentPsyfocus <= 0
-                || launcherPawn.psychicEntropy.WouldOverflowEntropy(_psyBlasterBulletComp.EntropyCost)) return;
+                || !CanConsumeResources(launcherPawn)
+                || launcherPawn.psychicEntropy.limitEntropyAmount && launcherPawn.psychicEntropy.WouldOverflowEntropy(_psyBlasterBulletComp.EntropyCost)) return;
             launcherPawn.psychicEntropy.OffsetPsyfocusDirectly(-_psyBlasterBulletComp.PsyCost);
             launcherPawn.psychicEntropy.TryAddEntropy(_psyBlasterBulletComp.EntropyCost);
         }
