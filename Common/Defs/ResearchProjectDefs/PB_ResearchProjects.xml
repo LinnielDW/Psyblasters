@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ResearchProjectDef>
+        <defName>PB_Psyblasters</defName>
+        <label>psyblaster weaponry</label>
+        <description>Build pulse charged weapons which psycasters can augment by spending their psychic energies for extra damage.</description>
+        <baseCost>500</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>ChargedShot</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>17.00</researchViewX>
+        <researchViewY>5.30</researchViewY>
+    </ResearchProjectDef>
+<!--    TODO: add augmented psyblasters-->
+    <ResearchProjectDef>
+        <defName>PB_AugmentedPsyblasters</defName>
+        <label>augmented psyblasters</label>
+        <description>Build augmented psyblasters, built for expending more of one psychic resource over the other.</description>
+        <baseCost>1500</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>PB_Psyblasters</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>18.00</researchViewX>
+        <researchViewY>5.30</researchViewY>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>PB_Braindump</defName>
+        <label>high yield psyblasting</label>
+        <description>Build augmented psyblasters, built for expending more of one psychic resource over the other.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>PB_Psyblasters</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>18.00</researchViewX>
+        <researchViewY>5.95</researchViewY>
+    </ResearchProjectDef>
+</Defs>

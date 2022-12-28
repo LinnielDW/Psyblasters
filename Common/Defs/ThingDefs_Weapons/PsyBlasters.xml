@@ -5,9 +5,8 @@
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
-        <!--TODO: change research-->
         <recipeMaker>
-            <researchPrerequisite>Fabrication</researchPrerequisite>
+            <researchPrerequisite>PB_Psyblasters</researchPrerequisite>
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
@@ -311,6 +310,16 @@
             <texPath>Things/Item/Equipment/Weapon/PB_rocketlauncher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <recipeMaker Inherit="False">
+            <researchPrerequisite>PB_Braindump</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>210</displayPriority>
+        </recipeMaker>
         <soundInteract>Interact_ChargeRifle</soundInteract>
         <statBases>
             <WorkToMake>50000</WorkToMake>
