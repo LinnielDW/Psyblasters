@@ -73,7 +73,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>PB_PsyblasterShot</defaultProjectile>
+                <defaultProjectile>PB_PsyblasterShot_Rifle</defaultProjectile>
                 <warmupTime>1.0</warmupTime>
                 <range>25.9</range>
                 <burstShotCount>3</burstShotCount>
@@ -85,7 +85,7 @@
         </verbs>
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
-        <defName>PB_PsyblasterShot</defName>
+        <defName>PB_PsyblasterShot_Rifle</defName>
         <label>blaster shot</label>
         <graphicData>
             <texPath>Things/Projectile/BlasterShot</texPath>

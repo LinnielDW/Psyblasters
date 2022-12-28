@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="BasePsyBlaster_NeuralHeat" ParentName="BasePsyBlaster" Abstract="True">
+        <recipeMaker>
+            <researchPrerequisite>PB_AugmentedPsyblasters</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>230</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+
+    <!--  Neuroblaster Rifle  -->
+    <ThingDef ParentName="BasePsyBlaster_NeuralHeat">
+        <defName>PB_Neuro_Rifle</defName>
+        <label>Neuroblaster Rifle</label>
+<!--        TODO: change text-->
+        <description>A psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/Heat/PB_heat_rifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>4.6</Mass>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.64</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.45</AccuracyLong>
+            <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <PB_Rifle>1</PB_Rifle>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_NeuroblasterShot_Rifle</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <range>25.9</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_NeuroblasterShot_Rifle</defName>
+        <label>blaster shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/BlasterShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationBase>0.28</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+        <comps>
+<!--            TODO: test numbers-->
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.5</psyDamageMulti>
+                <psyPenMulti>0.5</psyPenMulti>
+                <psyCost>0.04</psyCost>
+                <entropyCost>20</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>
