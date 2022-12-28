@@ -112,7 +112,7 @@
     
     <!--  Psyblaster Pistol  -->
     <ThingDef ParentName="BasePsyBlaster">
-        <defName>PB_Pisol</defName>
+        <defName>PB_Pistol</defName>
         <label>Psyblaster Pistol</label>
         <description>A psy-assisted pistol. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
@@ -305,7 +305,7 @@
     <ThingDef ParentName="BasePsyBlaster">
         <defName>PB_Braindump_RocketLauncher</defName>
         <label>Braindump Rocket Launcher</label>
-        <description>A reusable psychic energy payload delivery system. Affectionately called the 'Braindump' by its inventors, this weapon completely overwhelms the neural heat of the user, translating the created neural heat into a potentially devistating explosion. The strain of firing this weapon leaves the user incapacitated by psychic shock.</description>
+        <description>A reusable psychic energy payload delivery system. Affectionately called the 'Braindump' by its inventors, this weapon completely overwhelms the neural heat of the user, translating the created neural heat into a potentially devastating explosion. The strain of firing this weapon leaves the user incapacitated by psychic shock.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Ultratech/PB_rocket_ultra</texPath>
             <graphicClass>Graphic_Single</graphicClass>
