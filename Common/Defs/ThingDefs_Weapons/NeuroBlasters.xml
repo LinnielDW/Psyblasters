@@ -20,7 +20,7 @@
 <!--        TODO: change text-->
         <description>A psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder. Upon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
-            <texPath>Things/Item/Equipment/Weapon/Heat/PB_heat_rifle</texPath>
+            <texPath>Things/Item/Equipment/Weapon/Heat/PB_rifle_heat</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
@@ -73,8 +73,8 @@
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
                 <psyDamageMulti>0.5</psyDamageMulti>
                 <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.04</psyCost>
-                <entropyCost>20</entropyCost>
+                <psyCost>0.02</psyCost>
+                <entropyCost>16</entropyCost>
             </li>
         </comps>
     </ThingDef>
