@@ -27,9 +27,9 @@ namespace PsyBlasters
         public float PsyCost;
         public float EntropyCost;
 
-        public override void Initialize(CompProperties props)
+        public override void Initialize(CompProperties compProps)
         {
-            base.Initialize(props);
+            base.Initialize(compProps);
             PsyDamageMulti = Props.psyDamageMulti;
             PsyPenMulti = Props.psyPenMulti;
             PsyCost = Props.psyCost;
