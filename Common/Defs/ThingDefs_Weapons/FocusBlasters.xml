@@ -85,6 +85,9 @@
         <defName>PB_Focus_Pistol</defName>
         <label>Focusblaster Pistol</label>
         <description>A psy-assisted pistol. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Pistol</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Focus/PB_pistol_focus</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -148,6 +151,9 @@
         <defName>PB_Focus_Shotgun</defName>
         <label>Focusblaster Shotgun</label>
         <description>A psy-assisted shotgun. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Shotgun</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Focus/PB_shotgun_focus</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -212,6 +218,9 @@
         <defName>PB_Focus_Sniper</defName>
         <label>Focusblaster Sniper Rifle</label>
         <description>A psy-assisted sniper rifle. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Sniper</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Focus/PB_sniper_focus</texPath>
             <graphicClass>Graphic_Single</graphicClass>

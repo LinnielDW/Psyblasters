@@ -18,6 +18,9 @@
         <defName>PB_Neuro_Rifle</defName>
         <label>Neuroblaster Rifle</label>
         <description>A psy-assisted assault rifle. This weapon is augmented to use less psyfocus, but as a result, generates more neural heat and slightly less damage aplification.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Rifle</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Heat/PB_rifle_heat</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -82,6 +85,9 @@
         <defName>PB_Neuro_Pistol</defName>
         <label>Neuroblaster Pistol</label>
         <description>A psy-assisted pistol. This weapon is augmented to use less psyfocus, but as a result, generates more neural heat and slightly less damage aplification.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Pistol</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Heat/PB_pistol_heat</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -145,6 +151,9 @@
         <defName>PB_Neuro_Shotgun</defName>
         <label>Neuroblaster Shotgun</label>
         <description>A psy-assisted shotgun. This weapon is augmented to use less psyfocus, but as a result, generates more neural heat and slightly less damage aplification.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Shotgun</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Heat/PB_shotgun_heat</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -209,6 +218,9 @@
         <defName>PB_Neuro_Sniper</defName>
         <label>Neuroblaster Sniper Rifle</label>
         <description>A psy-assisted sniper rifle. This weapon is augmented to use less psyfocus, but as a result, generates more neural heat and slightly less damage aplification.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Sniper</ThingDef>
+        </descriptionHyperlinks>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Heat/PB_sniper_heat</texPath>
             <graphicClass>Graphic_Single</graphicClass>
