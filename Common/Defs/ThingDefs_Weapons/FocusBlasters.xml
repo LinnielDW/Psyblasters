@@ -94,7 +94,7 @@
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
         <statBases>
-            <WorkToMake>38000</WorkToMake>
+            <WorkToMake>9000</WorkToMake>
             <Mass>1.1</Mass>
             <AccuracyTouch>0.8</AccuracyTouch>
             <AccuracyShort>0.70</AccuracyShort>
@@ -160,7 +160,7 @@
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
         <statBases>
-            <WorkToMake>45000</WorkToMake>
+            <WorkToMake>9000</WorkToMake>
             <Mass>4.6</Mass>
             <AccuracyTouch>0.7</AccuracyTouch>
             <AccuracyShort>0.67</AccuracyShort>
@@ -227,7 +227,7 @@
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
         <statBases>
-            <WorkToMake>50000</WorkToMake>
+            <WorkToMake>9000</WorkToMake>
             <Mass>4.6</Mass>
             <AccuracyTouch>0.70</AccuracyTouch>
             <AccuracyShort>0.73</AccuracyShort>
