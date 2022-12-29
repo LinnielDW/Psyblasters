@@ -35,7 +35,7 @@ namespace PsyBlasters
             if (!CanConsumeResources(Launcher as Pawn)) return;
 
             var launcherPawn = (Pawn)Launcher;
-            Traverse.Create(launcherPawn).Field("psychicEntropy").Field("currentEntropy").SetValue(launcherPawn.psychicEntropy.MaxPotentialEntropy * 5f);
+            Traverse.Create(launcherPawn).Field("psychicEntropy").Field("currentEntropy").SetValue(launcherPawn.psychicEntropy.MaxPotentialEntropy * 5.5f);
         }
     }
 }

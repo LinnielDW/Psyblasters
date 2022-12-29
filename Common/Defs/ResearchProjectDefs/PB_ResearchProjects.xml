@@ -36,6 +36,7 @@
     <ResearchProjectDef>
         <defName>PB_Braindump</defName>
         <label>high yield psyblasting</label>
+<!--        TODO: change-->
         <description>Build augmented psyblasters, built for expending more of one psychic resource over the other.</description>
         <baseCost>1000</baseCost>
         <techLevel>Spacer</techLevel>
