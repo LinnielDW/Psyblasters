@@ -86,7 +86,7 @@
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
         <defName>PB_PsyblasterShot_Rifle</defName>
-        <label>blaster shot</label>
+        <label>psyblaster rifle shot</label>
         <graphicData>
             <texPath>Things/Projectile/BlasterShot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -150,7 +150,7 @@
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
         <defName>PB_PsyblasterShot_Pistol</defName>
-        <label>blaster pistol shot</label>
+        <label>psyblaster pistol shot</label>
         <graphicData>
             <texPath>Things/Projectile/BlasterShot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -213,7 +213,7 @@
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
         <defName>PB_PsyblasterShot_Shotgun</defName>
-        <label>blaster shotgun shot</label>
+        <label>psyblaster shotgun shot</label>
         <graphicData>
             <texPath>Things/Projectile/PB_wide_shot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -277,7 +277,7 @@
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
         <defName>PB_PsyblasterShot_Sniper</defName>
-        <label>blaster sniper shot</label>
+        <label>psyblaster sniper shot</label>
         <graphicData>
             <texPath>Things/Projectile/BlasterShot</texPath>
             <graphicClass>Graphic_Single</graphicClass>
