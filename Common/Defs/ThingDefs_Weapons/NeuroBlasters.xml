@@ -74,8 +74,8 @@
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
                 <psyDamageMulti>0.5</psyDamageMulti>
                 <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.02</psyCost>
-                <entropyCost>16</entropyCost>
+                <psyCost>0.03</psyCost>
+                <entropyCost>12</entropyCost>
             </li>
         </comps>
     </ThingDef>
@@ -140,8 +140,8 @@
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
                 <psyDamageMulti>0.5</psyDamageMulti>
                 <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.07</psyCost>
-                <entropyCost>10</entropyCost>
+                <psyCost>0.02</psyCost>
+                <entropyCost>9</entropyCost>
             </li>
         </comps>
     </ThingDef>
@@ -207,8 +207,8 @@
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
                 <psyDamageMulti>0.5</psyDamageMulti>
                 <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.1</psyCost>
-                <entropyCost>20</entropyCost>
+                <psyCost>0.035</psyCost>
+                <entropyCost>15</entropyCost>
             </li>
         </comps>
     </ThingDef>
@@ -274,8 +274,8 @@
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
                 <psyDamageMulti>0.5</psyDamageMulti>
                 <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.15</psyCost>
-                <entropyCost>20</entropyCost>
+                <psyCost>0.04</psyCost>
+                <entropyCost>18</entropyCost>
             </li>
         </comps>
     </ThingDef>

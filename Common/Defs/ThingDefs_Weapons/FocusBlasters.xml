@@ -72,9 +72,9 @@
         <comps>
             <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
-                <psyDamageMulti>0.75</psyDamageMulti>
-                <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.08</psyCost>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.09</psyCost>
                 <entropyCost>4</entropyCost>
             </li>
         </comps>
@@ -138,10 +138,10 @@
         <comps>
             <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
-                <psyDamageMulti>0.5</psyDamageMulti>
-                <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.07</psyCost>
-                <entropyCost>10</entropyCost>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.06</psyCost>
+                <entropyCost>3</entropyCost>
             </li>
         </comps>
     </ThingDef>
@@ -205,10 +205,10 @@
         <comps>
             <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
-                <psyDamageMulti>0.5</psyDamageMulti>
-                <psyPenMulti>0.5</psyPenMulti>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
                 <psyCost>0.1</psyCost>
-                <entropyCost>20</entropyCost>
+                <entropyCost>5</entropyCost>
             </li>
         </comps>
     </ThingDef>
@@ -272,10 +272,10 @@
         <comps>
             <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
                 <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
-                <psyDamageMulti>0.5</psyDamageMulti>
-                <psyPenMulti>0.5</psyPenMulti>
-                <psyCost>0.15</psyCost>
-                <entropyCost>20</entropyCost>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.12</psyCost>
+                <entropyCost>6</entropyCost>
             </li>
         </comps>
     </ThingDef>
