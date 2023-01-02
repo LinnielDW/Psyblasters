@@ -16,11 +16,10 @@
         <researchViewX>17.00</researchViewX>
         <researchViewY>5.30</researchViewY>
     </ResearchProjectDef>
-<!--    TODO: add augmented psyblasters-->
     <ResearchProjectDef>
         <defName>PB_AugmentedPsyblasters</defName>
         <label>augmented psyblasters</label>
-        <description>Build augmented psyblasters, built for expending more of one psychic resource over the other.</description>
+        <description>Build augmented psyblasters, built for higher damage output or for expending more of one psychic resource over the other.</description>
         <baseCost>1500</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
@@ -36,8 +35,7 @@
     <ResearchProjectDef>
         <defName>PB_Braindump</defName>
         <label>high yield psyblasting</label>
-<!--        TODO: change-->
-        <description>Build augmented psyblasters, built for expending more of one psychic resource over the other.</description>
+        <description>Build a psyblaster rocket launcher, expending all of a user's neural heat in a single deadly shot.</description>
         <baseCost>1000</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
