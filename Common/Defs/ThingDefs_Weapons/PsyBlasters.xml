@@ -49,7 +49,7 @@
     <!--  Psyblaster Rifle  -->
     <ThingDef ParentName="BasePsyBlaster">
         <defName>PB_Rifle</defName>
-        <label>Psyblaster Rifle</label>
+        <label>Psyblaster</label>
         <description>A psy-assisted assault rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Ultratech/PB_rifle_ultra</texPath>
@@ -113,7 +113,7 @@
     <!--  Psyblaster Pistol  -->
     <ThingDef ParentName="BasePsyBlaster">
         <defName>PB_Pistol</defName>
-        <label>Psyblaster Pistol</label>
+        <label>Psypistol</label>
         <description>A psy-assisted pistol. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Ultratech/PB_pistol_ultra</texPath>
@@ -176,7 +176,7 @@
     <!--  Psyblaster Shotgun  -->
     <ThingDef ParentName="BasePsyBlaster">
         <defName>PB_Shotgun</defName>
-        <label>Psyblaster Shotgun</label>
+        <label>Psyshot</label>
         <description>A psy-assisted shotgun. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Ultratech/PB_shotgun_ultra</texPath>
@@ -240,7 +240,7 @@
     <!--  Psyblaster Sniper  -->
     <ThingDef ParentName="BasePsyBlaster">
         <defName>PB_Sniper</defName>
-        <label>Psyblaster Sniper Rifle</label>
+        <label>Psyper Rifle</label>
         <description>A psy-assisted sniper rifle. While initially less powerful than similar weighted weapons, shots fired from this gun are amplified by psychic energies supplied by its wielder.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Ultratech/PB_sniper_ultra</texPath>

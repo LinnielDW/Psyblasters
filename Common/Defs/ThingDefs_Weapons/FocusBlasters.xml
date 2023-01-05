@@ -12,11 +12,10 @@
             <displayPriority>220</displayPriority>
         </recipeMaker>
     </ThingDef>
-    <!--            TODO: test numbers-->
     <!--  Focusblaster Rifle  -->
     <ThingDef ParentName="BasePsyBlaster_Focus">
         <defName>PB_Focus_Rifle</defName>
-        <label>Focusblaster Rifle</label>
+        <label>Focusblaster</label>
         <description>A psy-assisted assault rifle. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <descriptionHyperlinks>
             <ThingDef>PB_Rifle</ThingDef>

@@ -12,11 +12,10 @@
             <displayPriority>230</displayPriority>
         </recipeMaker>
     </ThingDef>
-    <!--            TODO: test numbers-->
     <!--  Neuroblaster Rifle  -->
     <ThingDef ParentName="BasePsyBlaster_NeuralHeat">
         <defName>PB_Neuro_Rifle</defName>
-        <label>Neuroblaster Rifle</label>
+        <label>Neuroblaster</label>
         <description>A psy-assisted assault rifle. This weapon is augmented to use less psyfocus, but as a result, generates more neural heat and slightly less damage aplification.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
         <descriptionHyperlinks>
             <ThingDef>PB_Rifle</ThingDef>
