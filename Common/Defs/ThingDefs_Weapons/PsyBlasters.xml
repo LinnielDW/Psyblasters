@@ -301,11 +301,11 @@
         </comps>
     </ThingDef>
     
-    <!--  Braindump Rocket Launcher  -->
+    <!--  Brain dump Rocket Launcher  -->
     <ThingDef ParentName="BasePsyBlaster">
         <defName>PB_Braindump_RocketLauncher</defName>
-        <label>Braindump Rocket Launcher</label>
-        <description>A reusable psychic energy payload delivery system. Affectionately called the 'Braindump' by its inventors, this weapon completely overwhelms the neural heat of the user, translating the created neural heat into a potentially devastating explosion. The strain of firing this weapon leaves the user incapacitated by psychic shock.</description>
+        <label>Brain Dump Rocket Launcher</label>
+        <description>A reusable psychic energy payload delivery system. Affectionately called the 'Brain Dump' by its inventors, this weapon completely overwhelms the neural heat of the user, translating the created neural heat into a potentially devastating explosion. The strain of firing this weapon leaves the user incapacitated by psychic shock.\n\nThe damage done is calculated by the neural heat generated BEFORE hitting maximum, but will always fry a psycaster's brain.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/Weapon/Ultratech/PB_rocket_ultra</texPath>
             <graphicClass>Graphic_Single</graphicClass>
