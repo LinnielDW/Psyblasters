@@ -17,10 +17,10 @@
         <researchViewY>5.30</researchViewY>
     </ResearchProjectDef>
     <ResearchProjectDef>
-        <defName>PB_AugmentedPsyblasters</defName>
-        <label>augmented psyblasters</label>
-        <description>Build augmented psyblasters, built for higher damage output or for expending more of one psychic resource over the other.</description>
-        <baseCost>1500</baseCost>
+        <defName>PB_Focusblasters</defName>
+        <label>focusblasters</label>
+        <description>Build augmented psyblasters, built for higher damage output at the expense of consuming more psyfocus per shot.</description>
+        <baseCost>500</baseCost>
         <techLevel>Spacer</techLevel>
         <prerequisites>
             <li>PB_Psyblasters</li>
@@ -31,6 +31,22 @@
         </requiredResearchFacilities>
         <researchViewX>18.00</researchViewX>
         <researchViewY>5.30</researchViewY>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>PB_Neuroblasters</defName>
+        <label>neuroblasters</label>
+        <description>Build augmented psyblasters, built for higher damage uptime and lower psyfocus cost at the expense of generating more neural heat.</description>
+        <baseCost>500</baseCost>
+        <techLevel>Spacer</techLevel>
+        <prerequisites>
+            <li>PB_Psyblasters</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>18.00</researchViewX>
+        <researchViewY>5.75</researchViewY>
     </ResearchProjectDef>
     <ResearchProjectDef>
         <defName>PB_Braindump</defName>
@@ -46,6 +62,6 @@
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
         <researchViewX>18.00</researchViewX>
-        <researchViewY>5.95</researchViewY>
+        <researchViewY>6.20</researchViewY>
     </ResearchProjectDef>
 </Defs>

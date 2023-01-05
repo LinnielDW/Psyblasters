@@ -2,7 +2,7 @@
 <Defs>
     <ThingDef Name="BasePsyBlaster_Focus" ParentName="BasePsyBlaster" Abstract="True">
         <recipeMaker>
-            <researchPrerequisite>PB_AugmentedPsyblasters</researchPrerequisite>
+            <researchPrerequisite>PB_Focusblasters</researchPrerequisite>
             <skillRequirements>
                 <Crafting>7</Crafting>
             </skillRequirements>
