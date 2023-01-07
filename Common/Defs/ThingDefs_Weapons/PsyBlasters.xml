@@ -68,6 +68,7 @@
         <costList>
             <Plasteel>35</Plasteel>
             <ComponentSpacer>3</ComponentSpacer>
+            <VPE_Eltex MayRequire="VanillaExpanded.VPsycastsE">2</VPE_Eltex>
         </costList>
         <verbs>
             <li>
@@ -132,6 +133,7 @@
         <costList>
             <Plasteel>15</Plasteel>
             <ComponentSpacer>1</ComponentSpacer>
+            <VPE_Eltex MayRequire="VanillaExpanded.VPsycastsE">1</VPE_Eltex>
         </costList>
         <verbs>
             <li>
@@ -195,6 +197,7 @@
         <costList>
             <Plasteel>35</Plasteel>
             <ComponentSpacer>3</ComponentSpacer>
+            <VPE_Eltex MayRequire="VanillaExpanded.VPsycastsE">2</VPE_Eltex>
         </costList>
         <verbs>
             <li>
@@ -259,6 +262,7 @@
         <costList>
             <Plasteel>35</Plasteel>
             <ComponentSpacer>4</ComponentSpacer>
+            <VPE_Eltex MayRequire="VanillaExpanded.VPsycastsE">2</VPE_Eltex>
         </costList>
         <verbs>
             <li>
@@ -329,6 +333,7 @@
         <costList>
             <Plasteel>50</Plasteel>
             <ComponentSpacer>10</ComponentSpacer>
+            <VPE_Eltex MayRequire="VanillaExpanded.VPsycastsE">3</VPE_Eltex>
         </costList>
         <verbs>
             <li>
