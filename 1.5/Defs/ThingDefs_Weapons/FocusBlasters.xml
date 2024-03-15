@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="BasePsyBlaster_Focus" ParentName="BasePsyBlaster" Abstract="True">
+        <recipeMaker>
+            <researchPrerequisite>PB_Focusblasters</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>220</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+    <!--  Focusblaster Rifle  -->
+    <ThingDef ParentName="BasePsyBlaster_Focus">
+        <defName>PB_Focus_Rifle</defName>
+        <label>Focusblaster</label>
+        <description>A psy-assisted assault rifle. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Rifle</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/Focus/PB_rifle_focus</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>4.6</Mass>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.64</AccuracyShort>
+            <AccuracyMedium>0.55</AccuracyMedium>
+            <AccuracyLong>0.45</AccuracyLong>
+            <RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <PB_Rifle>1</PB_Rifle>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_FocusblasterShot_Rifle</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <range>25.9</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_FocusblasterShot_Rifle</defName>
+        <label>focusblaster rifle shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/BlasterShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationBase>0.28</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+        <comps>
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.09</psyCost>
+                <entropyCost>4</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <!--  Focusblaster Pistol  -->
+    <ThingDef ParentName="BasePsyBlaster_Focus">
+        <defName>PB_Focus_Pistol</defName>
+        <label>Focusblaster Pistol</label>
+        <description>A psy-assisted pistol. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Pistol</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/Focus/PB_pistol_focus</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>1.1</Mass>
+            <AccuracyTouch>0.8</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.40</AccuracyMedium>
+            <AccuracyLong>0.30</AccuracyLong>
+            <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <PB_Pistol>1</PB_Pistol>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_PsyblasterShot_Pistol</defaultProjectile>
+                <warmupTime>0.3</warmupTime>
+                <range>22.9</range>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_FocusblasterShot_Pistol</defName>
+        <label>focusblaster pistol shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/BlasterShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>7</damageAmountBase>
+            <armorPenetrationBase>0.28</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+        <comps>
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.06</psyCost>
+                <entropyCost>3</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--  Focusblaster Shotgun  -->
+    <ThingDef ParentName="BasePsyBlaster_Focus">
+        <defName>PB_Focus_Shotgun</defName>
+        <label>Focusblaster Shotgun</label>
+        <description>A psy-assisted shotgun. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Shotgun</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/Focus/PB_shotgun_focus</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>4.6</Mass>
+            <AccuracyTouch>0.7</AccuracyTouch>
+            <AccuracyShort>0.67</AccuracyShort>
+            <AccuracyMedium>0.57</AccuracyMedium>
+            <AccuracyLong>0.54</AccuracyLong>
+            <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <PB_Shotgun>1</PB_Shotgun>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_PsyblasterShot_Shotgun</defaultProjectile>
+                <warmupTime>0.9</warmupTime>
+                <range>14.9</range>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_FocusblasterShot_Shotgun</defName>
+        <label>focusblaster shotgun shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/PB_wide_shot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>14</damageAmountBase>
+            <armorPenetrationBase>0.35</armorPenetrationBase>
+            <stoppingPower>3</stoppingPower>
+            <speed>60</speed>
+        </projectile>
+        <comps>
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.1</psyCost>
+                <entropyCost>5</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--  Focusblaster Sniper  -->
+    <ThingDef ParentName="BasePsyBlaster_Focus">
+        <defName>PB_Focus_Sniper</defName>
+        <label>Focusblaster Sniper Rifle</label>
+        <description>A psy-assisted sniper rifle. This weapon is augmented to use more psyfocus, resulting in higher damage while the user's focus reserves last.\nUpon impact, the wielder both loses and gains psychic focus and neural heat in small quantities to enhance the damage done by the bullet.</description>
+        <descriptionHyperlinks>
+            <ThingDef>PB_Sniper</ThingDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Weapon/Focus/PB_sniper_focus</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>4.6</Mass>
+            <AccuracyTouch>0.70</AccuracyTouch>
+            <AccuracyShort>0.73</AccuracyShort>
+            <AccuracyMedium>0.86</AccuracyMedium>
+            <AccuracyLong>0.88</AccuracyLong>
+            <RangedWeapon_Cooldown>2.30</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <PB_Sniper>1</PB_Sniper>
+            <ComponentSpacer>1</ComponentSpacer>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PB_PsyblasterShot_Sniper</defaultProjectile>
+                <warmupTime>3.0</warmupTime>
+                <range>39.9</range>
+                <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>PB_FocusblasterShot_Sniper</defName>
+        <label>focusblaster sniper shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/BlasterShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>PsyBlasters.PsychicBlasterBullet</thingClass>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>16</damageAmountBase>
+            <armorPenetrationBase>0.28</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>80</speed>
+        </projectile>
+        <comps>
+            <li Class="PsyBlasters.CompProperties_PsyBlasterBullet">
+                <compClass>PsyBlasters.PsyBlasterBulletComp</compClass>
+                <psyDamageMulti>0.8</psyDamageMulti>
+                <psyPenMulti>0.6</psyPenMulti>
+                <psyCost>0.12</psyCost>
+                <entropyCost>6</entropyCost>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>
