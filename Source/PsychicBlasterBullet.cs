@@ -3,7 +3,6 @@ using Verse;
 
 namespace PsyBlasters
 {
-    [HotSwappable]
     public class PsychicBlasterBullet : Bullet
     {
         PsyBlasterBulletComp _psyBlasterBulletComp => GetComp<PsyBlasterBulletComp>();

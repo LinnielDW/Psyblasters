@@ -44,9 +44,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <AboutFiles Include="..\Common\Textures\Things\UI\Psyblaster_ModIcon.png">
-      <Link>Common\Textures\Things\UI\Psyblaster_ModIcon.png</Link>
-    </AboutFiles>
     <CommonFiles Include="..\Common\**">
       <Link>Common\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </CommonFiles>
@@ -66,7 +63,10 @@
     <Compile Include="PsychicBlasterRocket.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="1.5\Assemblies\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 

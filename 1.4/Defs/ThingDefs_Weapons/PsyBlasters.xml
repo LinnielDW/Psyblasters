@@ -315,6 +315,11 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <recipeMaker Inherit="False">
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
             <researchPrerequisite>PB_Braindump</researchPrerequisite>
             <skillRequirements>
                 <Crafting>9</Crafting>
